@@ -27,8 +27,8 @@ UniColab is a collaborative platform designed to facilitate seamless interaction
 
 ## Repositories
 
-- **Frontend Repository**: [UniColab Frontend](https://github.com/your-frontend-repo)
-- **Authentication Server Repository**: [UniColab Auth Server](https://github.com/your-auth-server-repo)
+- **Frontend Repository**: [UniColab Frontend](https://github.com/jsinthiya/UniColab_Frontend)
+- **Authentication Server Repository**: [UniColab Auth Server](https://github.com/jsinthiya/UniColab_Auth_Server)
 
 ## Getting Started
 
