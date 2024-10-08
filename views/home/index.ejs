@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="/assets/plugins/global/plugins.bundle.css">
+		<link rel="stylesheet" href="/assets/css/style.bundle.css">
+		
+	</head>
+
+	
+<body
+id="kt_app_body"
+data-kt-app-header-fixed-mobile="true"
+data-kt-app-sidebar-enabled="true"
+data-kt-app-sidebar-fixed="true"
+data-kt-app-sidebar-hoverable="true"
+data-kt-app-sidebar-push-header="true"
+data-kt-app-sidebar-push-toolbar="true"
+data-kt-app-sidebar-push-footer="true"
+data-kt-app-toolbar-enabled="true"
+data-kt-app-aside-enabled="true"
+data-kt-app-aside-fixed="true"
+data-kt-app-aside-push-header="true"
+data-kt-app-aside-push-toolbar="true"
+data-kt-app-aside-push-footer="true"
+class="app-default"
+>
+<!--begin::Theme mode setup on page load-->
+<script>
+	var defaultThemeMode = "light";
+	var themeMode;
+	if (document.documentElement) {
+		if (document.documentElement.hasAttribute("data-bs-theme-mode")) {
+			themeMode =
+				document.documentElement.getAttribute("data-bs-theme-mode");
+		} else {
+			if (localStorage.getItem("data-bs-theme") !== null) {
+				themeMode = localStorage.getItem("data-bs-theme");
+			} else {
+				themeMode = defaultThemeMode;
+			}
+		}
+		if (themeMode === "system") {
+			themeMode = window.matchMedia("(prefers-color-scheme: dark)")
+				.matches
+				? "dark"
+				: "light";
+		}
+		document.documentElement.setAttribute("data-bs-theme", themeMode);
+	}
+
+</script>
+<!--end::Theme mode setup on page load-->
+	
+<div style="display: contents">
+	
+    	<!--begin::App-->
+	<div class="d-flex flex-column flex-root app-root" id="kt_app_root">
+		<!--begin::Page-->
+		<div class="app-page flex-column flex-column-fluid" id="kt_app_page">
+			<!--begin::Header-->
+			<div
+				id="kt_app_header"
+				class="app-header d-flex d-lg-none"
+				data-kt-sticky="true"
+				data-kt-sticky-activate={"{ default: false, lg: true }"}
+				data-kt-sticky-name="app-header-sticky"
+				data-kt-sticky-offset={"{ default: false, lg: '300px'}"}
+			>
+				<!--begin::Header container-->
+				<div
+					class="app-container container-fluid d-flex align-items-stretch"
+					id="kt_app_header_container"
+				>
+					<!--begin::Sidebar toggle-->
+					<div
+						class="d-flex align-items-center ms-n2 me-2"
+						title="Show sidebar menu"
+					>
+						<div
+							class="btn btn-icon btn-active-color-primary w-35px h-35px"
+							id="kt_app_sidebar_mobile_toggle"
+						>
+							<i class="ki-outline ki-abstract-14 fs-1"></i>
+						</div>
+					</div>
+					<!--end::Sidebar toggle-->
+					<!--begin::Logo-->
+					<div class="d-flex align-items-center me-auto">
+						<a href="index.html">
+							<img alt="Logo" src="#" class="h-25px" />
+						</a>
+					</div>
+					<!--end::Logo-->
+					<!--begin::Aside toggle-->
+					<div
+						class="d-flex align-items-center ms-2 me-n3"
+						title="Show header menu"
+					>
+						<div
+							class="btn btn-icon btn-active-color-primary w-35px h-35px"
+							id="kt_app_aside_mobile_toggle"
+						>
+							<i class="ki-outline ki-notification-status fs-1"
+							></i>
+						</div>
+					</div>
+					<!--end::Aside toggle-->
+				</div>
+				<!--end::Header container-->
+			</div>
+			<!--end::Header-->
+			<!--begin::Wrapper-->
+			<div
+				class="app-wrapper flex-column flex-row-fluid"
+				id="kt_app_wrapper"
+			>
+			
+            <%- include('../components/sidebar'); %>
+            
+			</div>
+			<!--end::Wrapper-->
+		</div>
+		<!--end::Page-->
+	</div>
+	<!--end::App-->
+
+
+
+
+
+  </div>
+
+	<!--begin::Scrolltop-->
+	<div id="kt_scrolltop" class="scrolltop" data-kt-scrolltop="true">
+		<i class="ki-outline ki-arrow-up"></i>
+	</div>
+	<!--end::Scrolltop-->
+	<!--begin::Javascript-->
+	<!--begin::Global Javascript Bundle(mandatory for all pages)-->
+	<script src="/assets/js/scripts.bundle.js"></script>
+	<script src="/assets/plugins/global/plugins.bundle.js"></script>
+	<script src="/assets/plugins/custom/fslightbox/fslightbox.bundle.js"></script>
+	<!--end::Global Javascript Bundle-->
+
+	<!--end::Javascript-->
+</body>
+	
+</html>

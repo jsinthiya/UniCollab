@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="/assets/plugins/global/plugins.bundle.css">
+		<link rel="stylesheet" href="/assets/css/style.bundle.css">
+		
+	</head>
+
+	
+<body
+id="kt_app_body"
+data-kt-app-header-fixed-mobile="true"
+data-kt-app-sidebar-enabled="true"
+data-kt-app-sidebar-fixed="true"
+data-kt-app-sidebar-hoverable="true"
+data-kt-app-sidebar-push-header="true"
+data-kt-app-sidebar-push-toolbar="true"
+data-kt-app-sidebar-push-footer="true"
+data-kt-app-toolbar-enabled="true"
+data-kt-app-aside-enabled="true"
+data-kt-app-aside-fixed="true"
+data-kt-app-aside-push-header="true"
+data-kt-app-aside-push-toolbar="true"
+data-kt-app-aside-push-footer="true"
+class="app-default"
+>
+<!--begin::Theme mode setup on page load-->
+<script>
+	var defaultThemeMode = "light";
+	var themeMode;
+	if (document.documentElement) {
+		if (document.documentElement.hasAttribute("data-bs-theme-mode")) {
+			themeMode =
+				document.documentElement.getAttribute("data-bs-theme-mode");
+		} else {
+			if (localStorage.getItem("data-bs-theme") !== null) {
+				themeMode = localStorage.getItem("data-bs-theme");
+			} else {
+				themeMode = defaultThemeMode;
+			}
+		}
+		if (themeMode === "system") {
+			themeMode = window.matchMedia("(prefers-color-scheme: dark)")
+				.matches
+				? "dark"
+				: "light";
+		}
+		document.documentElement.setAttribute("data-bs-theme", themeMode);
+	}
+
+</script>
+<!--end::Theme mode setup on page load-->
+	
+<div style="display: contents">
+	
+
+  </div>
+
+	<!--begin::Scrolltop-->
+	<div id="kt_scrolltop" class="scrolltop" data-kt-scrolltop="true">
+		<i class="ki-outline ki-arrow-up"></i>
+	</div>
+	<!--end::Scrolltop-->
+	<!--begin::Javascript-->
+	<!--begin::Global Javascript Bundle(mandatory for all pages)-->
+	<script src="/assets/js/scripts.bundle.js"></script>
+	<script src="/assets/plugins/global/plugins.bundle.js"></script>
+	<script src="/assets/plugins/custom/fslightbox/fslightbox.bundle.js"></script>
+	<!--end::Global Javascript Bundle-->
+
+	<!--end::Javascript-->
+</body>
+	
+</html>

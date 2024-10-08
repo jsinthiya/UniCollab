@@ -1,0 +1,10 @@
+# ignore ALL .log files
+*.log
+.env
+
+# ignore ALL files in ANY directory named temp
+Test/
+node_modules/
+/Schema
+/Test
+/public
